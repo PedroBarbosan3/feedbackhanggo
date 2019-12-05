@@ -73,8 +73,7 @@
       };
       firebase.initializeApp(firebaseConfig);
       var db = firebase.firestore();
-      document.getElementById("btn").addEventListener("click", write);
-    function write(){
+      document.getElementById("btn").addEventListener("click",function() {
          var comentario = document.querySelector("#box").value;
          var nome = document.querySelector("#usuario").value;
          var idade = document.querySelector("#idade").value;
@@ -88,8 +87,8 @@
         }).catch(function (error) {
             console.error("Error writing document: ", error);
         });
-        window.alert("você mandou sua mensagem");
-    }
+        window.alert("Obrigado por enviar sua sugestão");
+    },{once : true});
     </script>
           
     </body>
